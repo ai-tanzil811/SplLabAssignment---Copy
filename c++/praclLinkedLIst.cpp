@@ -21,53 +21,7 @@ void InsertAtFirst(int v)
     t->next=head;
     head=t;
 }
-void reversePrint() {
-    if (head == NULL) {
-        return;
-    }
-    reversePrint();
-    cout << head->a << " ";
-    head = head->next;
-}
 
-void printList()
-{
-
-    node *k =head;
-if(k==NULL) return;
-    while(k)
-    {
-        cout<<k->a<<" ";
-        if(k->next==NULL)
-            cout<<"end";
-        else
-            cout<<" -> ";
-        k=k->next;
-    }
-    cout<<endl;
-
-}
-void countList()
-{
-    int c =0;
-    node *k =head;
-    while(k)
-    {
-        if(head ==NULL)
-        {
-            cout<<"Empty list";
-            return;
-        }
-        else
-        {
-            c++;
-            k=k->next;
-        }
-
-
-    }
-    cout<<endl<<"THe number of elment is "<< c;
-}
 void insertAt(int v,int index)
 {
    if(index<=1)
@@ -175,6 +129,53 @@ void deletefromAny(int i)
     node *temp =ptr->next;
     ptr->next= temp->next;
     free(temp);
+}
+void reversePrint() {
+    if (head == NULL) {
+        return;
+    }
+    reversePrint();
+    cout << head->a << " ";
+    head = head->next;
+}
+
+void printList()
+{
+
+    node *k =head;
+if(k==NULL) return;
+    while(k)
+    {
+        cout<<k->a<<" ";
+        if(k->next==NULL)
+            cout<<"end";
+        else
+            cout<<" -> ";
+        k=k->next;
+    }
+    cout<<endl;
+
+}
+void countList()
+{
+    int c =0;
+    node *k =head;
+    while(k)
+    {
+        if(head ==NULL)
+        {
+            cout<<"Empty list";
+            return;
+        }
+        else
+        {
+            c++;
+            k=k->next;
+        }
+
+
+    }
+    cout<<endl<<"THe number of elment is "<< c;
 }
 int main()
 {
